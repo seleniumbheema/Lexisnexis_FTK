@@ -39,6 +39,11 @@ formatter.step({
   "name": "clickon \"signin\"",
   "keyword": "And "
 });
+formatter.step({
+  "line": 11,
+  "name": "Sign in is \"button\"",
+  "keyword": "And "
+});
 formatter.match({
   "arguments": [
     {
@@ -53,7 +58,7 @@ formatter.match({
   "location": "FTK_Cap.I_go_to_url(String,String)"
 });
 formatter.result({
-  "duration": 20396999274,
+  "duration": 17559603944,
   "status": "passed"
 });
 formatter.match({
@@ -66,7 +71,7 @@ formatter.match({
   "location": "FTK_Cap.Addacct(String)"
 });
 formatter.result({
-  "duration": 245656840,
+  "duration": 181741331,
   "status": "passed"
 });
 formatter.match({
@@ -83,7 +88,7 @@ formatter.match({
   "location": "FTK_Cap.user_pass(String,String)"
 });
 formatter.result({
-  "duration": 3624619808,
+  "duration": 3507619777,
   "status": "passed"
 });
 formatter.match({
@@ -100,7 +105,7 @@ formatter.match({
   "location": "FTK_Cap.user_pass(String,String)"
 });
 formatter.result({
-  "duration": 223575810,
+  "duration": 419106953,
   "status": "passed"
 });
 formatter.match({
@@ -113,7 +118,21 @@ formatter.match({
   "location": "FTK_Cap.sign_in(String)"
 });
 formatter.result({
-  "duration": 333131746,
+  "duration": 562510731,
   "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "button",
+      "offset": 12
+    }
+  ],
+  "location": "FTK_Cap.result(String)"
+});
+formatter.result({
+  "duration": 19215216533,
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[button]\u003e but was:\u003c[failure]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pack.ftk.FTK_Cap.result(FTK_Cap.java:56)\r\n\tat ✽.And Sign in is \"button\"(pack/ftk/FTK_JCS.feature:11)\r\n",
+  "status": "failed"
 });
 });

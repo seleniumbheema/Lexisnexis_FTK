@@ -45,6 +45,8 @@ public class webconnector {
 		}
 	}
 	
+//	Application Independetn Functions
+	
 	public void openbrowser(String browsertype){
 		if(browsertype.equals("Mozilla"))
 		{
@@ -65,6 +67,9 @@ public class webconnector {
 	public void navigate(String brURL)
 	{
 		driver.get(CONFIG.getProperty(brURL));
+		
+		
+//		Application dependent Functions
 	}
 	public void accounts(String object){
 		driver.findElement(By.xpath(OR.getProperty(object))).click();
@@ -76,5 +81,14 @@ public class webconnector {
 	public void clicks(String obj)
 	{
 		driver.findElement(By.xpath(OR.getProperty(obj))).click();
+	}
+	public boolean isElementPresent(String obj)
+	{
+		int count = driver.findElements(By.xpath(OR.getProperty(obj))).size();
+	
+		if(count == 0)
+			return false;
+		else 
+			return true;
 	}
 }

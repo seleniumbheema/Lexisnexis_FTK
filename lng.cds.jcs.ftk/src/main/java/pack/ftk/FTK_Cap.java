@@ -1,5 +1,7 @@
 package pack.ftk;
 
+import org.junit.Assert;
+
 import pack.util.webconnector;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -42,7 +44,22 @@ public class FTK_Cap
 		System.out.println("Sign_in "+object);
 		connector.clicks(object);
 	}
+	@And("^Sign in is \"([^\"]*)\"$")
+	public void result(String expectedresult){
+	System.out.println("Sign in "+expectedresult);
+	boolean result = connector.isElementPresent("button");
+	String actualresult = null;
+	if(result)
+		actualresult = "success";
+	else 
+		actualresult= "failure";
+	Assert.assertEquals(expectedresult, actualresult);
+	
+	
+	
+	}
 /*	
+ *
 	
 	
 	@When("^click on \"([^\"]*)\"$")

@@ -8,6 +8,7 @@ When click on "Addaccount"
 Then I enter "username" as "adminuser"
 Then I enter "password" as "adminpass"
 And clickon "signin"
+And Sign in is "button"
 
 
 
